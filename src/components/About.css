@@ -1,0 +1,17 @@
+.about{
+  text-align:center;
+  padding:60px 10%;
+}
+
+
+.about h2{
+  color:#38bdf8;
+}
+
+
+.about p{
+  max-width:800px;
+  margin:20px auto;
+  color:#cbd5e1;
+  line-height:1.8;
+}
