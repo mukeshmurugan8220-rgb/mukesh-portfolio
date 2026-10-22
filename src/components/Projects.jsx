@@ -17,7 +17,7 @@ const projects = [
     desc: "A responsive e-commerce website featuring product listings, user authentication, and shopping functionality using the MERN stack.",
     tech: ["React", "Node.js", "Express.js", "MongoDB"],
     github: "https://github.com/mukeshmurugan8220-rgb",
-    demo: "shopsphere-frontend.netlify.app",
+    demo: "https://shopsphere-frontend.netlify.app/",
     number: "02",
     icon: "🛍️",
   },
