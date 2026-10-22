@@ -1,16 +1,164 @@
-.footer{
 
-text-align:center;
-padding:25px;
-background:#020617;
-color:#cbd5e1;
-margin-top:50px;
-
+.footer {
+  padding: 35px 8% 20px;
+  background: #080d19;
+  color: #cbd5e1;
+  border-top: 1px solid #1e293b;
+  font-family: "Poppins", sans-serif;
 }
 
-
-.footer p{
-
-margin:8px;
-
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-bottom: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
 }
+
+.footer-logo {
+  color: #f8fafc;
+  font-size: 25px;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.footer-logo span {
+  color: #38bdf8;
+}
+
+.footer-text {
+  margin: 0;
+  color: #94a3b8;
+  font-size: 14px;
+  text-align: center;
+}
+
+.footer-top-button {
+  width: 42px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #334155;
+  border-radius: 10px;
+  background: #111c30;
+  color: #38bdf8;
+  font-size: 16px;
+  cursor: pointer;
+  transition:
+    background 0.3s ease,
+    color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.footer-top-button:hover {
+  background: #38bdf8;
+  color: #08111f;
+  transform: translateY(-3px);
+}
+
+.footer-bottom {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-top: 20px;
+  border-top: 1px solid #1e293b;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+.footer-bottom p {
+  margin: 0;
+  color: #94a3b8;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+.footer-made {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.footer-made span {
+  color: #38bdf8;
+  font-weight: 600;
+}
+
+.footer-heart {
+  margin-left: 3px;
+  color: #f87171;
+  font-size: 13px;
+}
+
+/* Tablet */
+
+@media (max-width: 768px) {
+  .footer {
+    padding: 30px 6% 20px;
+  }
+
+  .footer-container {
+    flex-wrap: wrap;
+  }
+
+  .footer-text {
+    flex: 1;
+    text-align: right;
+  }
+}
+
+/* Mobile */
+
+@media (max-width: 480px) {
+  .footer {
+    padding: 28px 5% 18px;
+  }
+
+  .footer-container {
+    justify-content: space-between;
+    gap: 15px;
+  }
+
+  .footer-logo {
+    font-size: 23px;
+  }
+
+  .footer-text {
+    order: 3;
+    flex-basis: 100%;
+    text-align: left;
+    font-size: 13px;
+  }
+
+  .footer-top-button {
+    width: 38px;
+    height: 38px;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+    gap: 8px;
+  }
+
+  .footer-bottom p {
+    font-size: 12px;
+  }
+}
+
+/* Accessibility */
+
+@media (prefers-reduced-motion: reduce) {
+  .footer-top-button {
+    transition: none;
+  }
+
+  .footer-top-button:hover {
+    transform: none;
+  }
+}
+

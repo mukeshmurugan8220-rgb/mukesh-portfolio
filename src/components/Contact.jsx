@@ -1,58 +1,121 @@
+
 import "./Contact.css";
 
-function Contact(){
+import {
+  FaEnvelope,
+  FaPhoneAlt,
+  FaMapMarkerAlt,
+  FaLinkedin,
+  FaGithub,
+  FaExternalLinkAlt,
+} from "react-icons/fa";
 
-return(
+function Contact() {
+  return (
+    <section className="contact" id="contact">
+      <div className="contact-container">
 
-<section className="contact" id="contact">
+        {/* Heading */}
+        <div className="contact-heading">
+          <span className="contact-label">GET IN TOUCH</span>
 
-<h2>Contact Me</h2>
+          <h2>
+            Contact <span>Me</span>
+          </h2>
 
-<div className="contact-box">
+          <p>
+            Have a project idea or a job opportunity?
+            Feel free to get in touch with me.
+          </p>
+        </div>
 
+        {/* Contact Information */}
+        <div className="contact-box">
 
-<p>
-📧 Email: mukesh@example.com
-</p>
+          {/* Email */}
+          <a
+            href="mailto:mukeshmurugan@gmail.com"
+            className="contact-item"
+          >
+            <div className="contact-icon">
+              <FaEnvelope />
+            </div>
 
+            <div className="contact-info">
+              <h3>Email</h3>
+              <p>mukeshmurugan@gmail.com</p>
+            </div>
 
-<p>
-📱 Phone: +91 8220526438
-</p>
+            <FaExternalLinkAlt className="contact-arrow" />
+          </a>
 
+          {/* Phone */}
+          <a
+            href="tel:+918220526438"
+            className="contact-item"
+          >
+            <div className="contact-icon">
+              <FaPhoneAlt />
+            </div>
 
-<p>
-📍 Location: Tamil Nadu, India
-</p>
+            <div className="contact-info">
+              <h3>Phone</h3>
+              <p>+91 8220526438</p>
+            </div>
 
+            <FaExternalLinkAlt className="contact-arrow" />
+          </a>
 
-<div className="contact-buttons">
+          {/* Location */}
+          <div className="contact-item">
+            <div className="contact-icon">
+              <FaMapMarkerAlt />
+            </div>
 
-<a 
-href="https://www.linkedin.com/"
-target="_blank"
->
-LinkedIn
-</a>
+            <div className="contact-info">
+              <h3>Location</h3>
+              <p>Tamil Nadu, India</p>
+            </div>
+          </div>
 
+        </div>
 
-<a 
-href="https://github.com/mukeshmurugan8220-rgb"
-target="_blank"
->
-GitHub
-</a>
+        {/* Social Links */}
+        <div className="contact-social">
+          <h3>Connect With Me</h3>
 
+          <div className="contact-buttons">
 
-</div>
+            {/* LinkedIn */}
+            <a
+              href="https://www.linkedin.com/in/mukesh-m-0b3582312/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="contact-social-link"
+            >
+              <FaLinkedin />
+              <span>LinkedIn</span>
+              <FaExternalLinkAlt />
+            </a>
 
+            {/* GitHub */}
+            <a
+              href="https://github.com/mukeshmurugan8220-rgb"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="contact-social-link"
+            >
+              <FaGithub />
+              <span>GitHub</span>
+              <FaExternalLinkAlt />
+            </a>
 
-</div>
+          </div>
+        </div>
 
-</section>
-
-)
-
+      </div>
+    </section>
+  );
 }
 
 export default Contact;

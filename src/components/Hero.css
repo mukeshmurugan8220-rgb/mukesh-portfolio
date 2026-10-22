@@ -1,131 +1,419 @@
-.hero{
-    min-height:90vh;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:60px 10%;
+/* ==============================
+   HERO SECTION
+============================== */
+
+.hero {
+  position: relative;
+  min-height: 90vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 50px;
+  padding: 90px 10%;
+  overflow: hidden;
 }
 
-.hero-text{
-    width:50%;
+/* HERO TEXT */
+
+.hero-text {
+  width: 55%;
+  animation: heroTextReveal 0.9s ease both;
 }
 
-.hero-text h1{
-    font-size:55px;
-    color:#38bdf8;
-    margin-bottom:15px;
+.hero-badge {
+  display: inline-block;
+  margin-bottom: 22px;
+  padding: 10px 16px;
+  border: 1px solid rgba(56, 189, 248, 0.3);
+  border-radius: 30px;
+  background: rgba(56, 189, 248, 0.08);
+  color: #7dd3fc;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
 }
 
-.hero-text h2{
-    font-size:35px;
-    margin-bottom:15px;
+.hero-text h1 {
+  margin-bottom: 15px;
+  color: #f8fafc;
+  font-size: clamp(2.5rem, 5vw, 4.5rem);
+  font-weight: 800;
+  line-height: 1.2;
 }
 
-.hero-text p{
-    color:#cbd5e1;
-    font-size:18px;
-    line-height:1.6;
+.highlight {
+  color: #38bdf8;
+  background: linear-gradient(90deg, #38bdf8, #818cf8);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
-.hero-buttons{
-    margin-top:25px;
-    display:flex;
-    gap:20px;
+.hero-role {
+  min-height: 48px;
+  margin-bottom: 20px;
+  color: #38bdf8;
+  font-size: clamp(1.5rem, 3vw, 2.2rem);
+  font-weight: 700;
 }
 
-.github-btn{
-    padding:12px 25px;
-    border-radius:8px;
-    text-decoration:none;
-    font-weight:bold;
-    border:2px solid #38bdf8;
-    color:#38bdf8;
-    transition:0.3s;
+.typing-cursor {
+  display: inline-block;
+  margin-left: 4px;
+  color: #38bdf8;
+  animation: cursorBlink 0.7s infinite;
 }
 
-.github-btn:hover{
-    background:#38bdf8;
-    color:#020617;
+.hero-description {
+  margin-bottom: 14px;
+  color: #e2e8f0;
+  font-size: 1.05rem;
+  line-height: 1.8;
 }
 
-.hero-image img{
-    width:320px;
-    height:320px;
-    border-radius:50%;
-    object-fit:cover;
-    object-position:center 20%;
-    border:5px solid #38bdf8;
+.hero-subtitle {
+  max-width: 580px;
+  margin-bottom: 28px;
+  color: #94a3b8;
+  font-size: 1rem;
+  line-height: 1.9;
 }
 
-/* ---------- Tablet ---------- */
+/* HERO BUTTONS */
 
-@media (max-width:768px){
-
-.hero{
-    flex-direction:column-reverse;
-    justify-content:center;
-    align-items:center;
-    text-align:center;
-    gap:30px;
-    padding:40px 20px;
-    min-height:auto;
+.hero-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 16px;
+  margin-top: 28px;
 }
 
-.hero-text{
-    width:100%;
+.github-btn,
+.hero-project-btn {
+  position: relative;
+  display: inline-flex;
+  min-height: 48px;
+  align-items: center;
+  justify-content: center;
+  padding: 13px 24px;
+  border: 1px solid #38bdf8;
+  border-radius: 10px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition:
+    transform 0.3s ease,
+    background 0.3s ease,
+    color 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
-.hero-text h1{
-    font-size:40px;
+.github-btn {
+  background: #38bdf8;
+  color: #0f172a;
 }
 
-.hero-text h2{
-    font-size:28px;
+.hero-project-btn {
+  background: transparent;
+  color: #7dd3fc;
 }
 
-.hero-text p{
-    font-size:16px;
+.github-btn:hover {
+  transform: translateY(-4px);
+  background: #7dd3fc;
+  box-shadow: 0 10px 25px rgba(56, 189, 248, 0.2);
 }
 
-.hero-buttons{
-    justify-content:center;
+.hero-project-btn:hover {
+  transform: translateY(-4px);
+  background: rgba(56, 189, 248, 0.1);
+  box-shadow: 0 10px 25px rgba(56, 189, 248, 0.1);
 }
 
-.hero-image img{
-    width:230px;
-    height:230px;
+/* PROFILE IMAGE */
+
+.hero-image {
+  position: relative;
+  display: flex;
+  width: 40%;
+  min-width: 250px;
+  align-items: center;
+  justify-content: center;
+  animation: heroImageReveal 1s ease both;
 }
 
+.hero-image img {
+  position: relative;
+  z-index: 2;
+  display: block;
+  width: min(100%, 350px);
+  aspect-ratio: 1;
+  border: 5px solid #38bdf8;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center 20%;
+  box-shadow:
+    0 0 25px rgba(56, 189, 248, 0.2),
+    0 0 60px rgba(56, 189, 248, 0.08);
+  animation: profileFloat 4s ease-in-out infinite;
 }
 
-/* ---------- Mobile ---------- */
+/* IMAGE GLOW */
 
-@media (max-width:480px){
-
-.hero{
-    padding:30px 15px;
+.hero-image-glow {
+  position: absolute;
+  z-index: 1;
+  width: 85%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: rgba(56, 189, 248, 0.18);
+  filter: blur(55px);
+  animation: glowPulse 4s ease-in-out infinite;
 }
 
-.hero-text h1{
-    font-size:32px;
+/* FLOATING BADGES */
+
+.floating-badge {
+  position: absolute;
+  z-index: 3;
+  padding: 12px 17px;
+  border: 1px solid rgba(56, 189, 248, 0.3);
+  border-radius: 12px;
+  background: rgba(15, 23, 42, 0.92);
+  color: #e2e8f0;
+  font-size: 0.85rem;
+  font-weight: 700;
+  white-space: nowrap;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(12px);
 }
 
-.hero-text h2{
-    font-size:22px;
+.badge-top {
+  top: 15%;
+  right: -5%;
+  animation: badgeFloat 3.5s ease-in-out infinite;
 }
 
-.hero-text p{
-    font-size:15px;
+.badge-bottom {
+  bottom: 15%;
+  left: -8%;
+  animation: badgeFloat 4s ease-in-out infinite reverse;
 }
 
-.hero-image img{
-    width:180px;
-    height:180px;
+/* ANIMATIONS */
+
+@keyframes heroTextReveal {
+  from {
+    opacity: 0;
+    transform: translateX(-35px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
-.github-btn{
-    width:150px;
-    text-align:center;
+@keyframes heroImageReveal {
+  from {
+    opacity: 0;
+    transform: translateX(35px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
+@keyframes profileFloat {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-12px);
+  }
+}
+
+@keyframes badgeFloat {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-9px);
+  }
+}
+
+@keyframes glowPulse {
+  0%,
+  100% {
+    opacity: 0.5;
+    transform: scale(0.95);
+  }
+
+  50% {
+    opacity: 0.9;
+    transform: scale(1.08);
+  }
+}
+
+@keyframes cursorBlink {
+  0%,
+  49% {
+    opacity: 1;
+  }
+
+  50%,
+  100% {
+    opacity: 0;
+  }
+}
+
+/* TABLET */
+
+@media (max-width: 900px) {
+  .hero {
+    gap: 30px;
+    padding: 80px 6%;
+  }
+
+  .hero-image img {
+    width: min(100%, 300px);
+  }
+
+  .badge-top {
+    right: -3%;
+  }
+
+  .badge-bottom {
+    left: -3%;
+  }
+}
+
+/* MOBILE */
+
+@media (max-width: 650px) {
+  .hero {
+    min-height: auto;
+    flex-direction: column-reverse;
+    justify-content: center;
+    gap: 40px;
+    padding: 55px 22px 70px;
+    text-align: center;
+  }
+
+  .hero-text {
+    width: 100%;
+  }
+
+  .hero-badge {
+    margin-bottom: 18px;
+    font-size: 12px;
+  }
+
+  .hero-text h1 {
+    font-size: clamp(2.2rem, 9vw, 3rem);
+  }
+
+  .hero-role {
+    min-height: 38px;
+    font-size: clamp(1.25rem, 5.5vw, 1.8rem);
+  }
+
+  .hero-description {
+    font-size: 0.95rem;
+  }
+
+  .hero-subtitle {
+    margin-right: auto;
+    margin-left: auto;
+    font-size: 0.93rem;
+  }
+
+  .hero-buttons {
+    justify-content: center;
+    gap: 12px;
+  }
+
+  .github-btn,
+  .hero-project-btn {
+    padding: 12px 17px;
+    font-size: 0.88rem;
+  }
+
+  .hero-image {
+    width: 75%;
+    min-width: 0;
+    max-width: 290px;
+  }
+
+  .hero-image img {
+    width: 100%;
+  }
+
+  .floating-badge {
+    padding: 9px 12px;
+    font-size: 0.72rem;
+  }
+
+  .badge-top {
+    top: 12%;
+    right: -12%;
+  }
+
+  .badge-bottom {
+    bottom: 12%;
+    left: -12%;
+  }
+}
+
+/* SMALL MOBILE */
+
+@media (max-width: 380px) {
+  .hero {
+    padding-right: 16px;
+    padding-left: 16px;
+  }
+
+  .hero-image {
+    width: 72%;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .github-btn,
+  .hero-project-btn {
+    width: 100%;
+  }
+
+  .floating-badge {
+    padding: 8px 10px;
+    font-size: 0.65rem;
+  }
+}
+
+/* REDUCED MOTION ACCESSIBILITY */
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-text,
+  .hero-image,
+  .hero-image img,
+  .hero-image-glow,
+  .floating-badge,
+  .typing-cursor {
+    animation: none;
+  }
+
+  .github-btn,
+  .hero-project-btn {
+    transition: none;
+  }
 }
