@@ -34,7 +34,7 @@ function Contact() {
 
           {/* Email */}
           <a
-            href="mailto:mukeshmurugan@gmail.com"
+            href="mailto:mukeshmurugan8220@gmail.com"
             className="contact-item"
           >
             <div className="contact-icon">
@@ -43,7 +43,7 @@ function Contact() {
 
             <div className="contact-info">
               <h3>Email</h3>
-              <p>mukeshmurugan@gmail.com</p>
+              <p>mukeshmurugan8220@gmail.com</p>
             </div>
 
             <FaExternalLinkAlt className="contact-arrow" />
